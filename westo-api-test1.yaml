@@ -1,0 +1,52 @@
+
+AWSTemplateFormatVersion: 2010-09-09
+Description: westyco template
+
+ 
+Resources:
+  westco-api:
+    Type: 'AWS::ApiGatewayV2::Api'
+    Properties: {
+
+    }
+
+  GET:
+    Type: AWS::ApiGateway::Resource
+    Properties: 
+      ParentId: String
+      PathPart: String
+      RestApiId: String
+
+  beta:
+    Type: AWS::ApiGateway::Stage
+    Properties: 
+      AccessLogSetting: 
+        AccessLogSetting
+      CacheClusterEnabled: Boolean
+      CacheClusterSize: String
+      CanarySetting: 
+        CanarySetting
+      ClientCertificateId: String
+      DeploymentId: String
+      Description: String
+      DocumentationVersion: String
+      MethodSettings: 
+        - MethodSetting
+      RestApiId: String
+      StageName: String
+      Tags: 
+        - Tag
+      TracingEnabled: Boolean
+      Variables: 
+        Key : Value      
+
+  westco-deployment:
+    Type: AWS::ApiGateway::Deployment
+    Properties: 
+      DeploymentCanarySettings: 
+        DeploymentCanarySettings
+      Description: String
+      RestApiId: String
+      StageDescription: 
+        StageDescription
+      StageName: String
