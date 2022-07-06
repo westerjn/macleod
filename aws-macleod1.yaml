@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Template to create s3 bucket and policy
+
+
+Resources:
+
+  CobraBucket:
+    Type: 'AWS::S3::Bucket'
+    Description: Bucket on which we will attach and test bucket policy
+    Properties:
+      BucketName: stormshadow-bucket
